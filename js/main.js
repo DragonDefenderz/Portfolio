@@ -224,7 +224,7 @@ $(function() {
 
   ------------------------------------------------------------
   ----------------------------------------------------------*/
-document.addEventListener("swup:contentReplaced")
+document.addEventListener("swup:contentReplaced", function() {
     /***************************
 
     preloader
