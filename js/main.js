@@ -179,42 +179,102 @@ $(function() {
   });
   /***************************
 
-  fancybox
+fancybox
 
-  ***************************/
-  $('[data-fancybox]').fancybox({
-    animationEffect: "zoom-in-out",
-    animationDuration: 600,
-    transitionDuration: 1200,
-    buttons: [
-      "zoom",
-      "slideShow",
-      "thumbs",
-      "close",
-    ],
-  });
-  $('[data-fancybox="gallery"]').fancybox({
-    animationEffect: "zoom-in-out",
-    animationDuration: 600,
-    transitionDuration: 1200,
-    buttons: [
-      "zoom",
-      "slideShow",
-      "thumbs",
-      "close",
-    ],
-  });
-  $('[data-fancybox="portfolio"]').fancybox({
-    animationEffect: "zoom-in-out",
-    animationDuration: 600,
-    transitionDuration: 1200,
-    buttons: [
-      "zoom",
-      "slideShow",
-      "thumbs",
-      "close",
-    ],
-  });
+***************************/
+$('[data-fancybox]').fancybox({
+  animationEffect: "zoom-in-out",
+  animationDuration: 600,
+  transitionDuration: 1200,
+  buttons: [
+    "zoom",
+    "slideShow",
+    "thumbs",
+    "close",
+  ],
+  // Add these options to force side-by-side layout
+  caption: function(instance, item) {
+    return $(this).data('caption') || item.opts.$orig.data('caption') || '';
+  },
+  afterLoad: function(instance, current) {
+    // Force caption to be visible and positioned properly
+    current.$content.addClass('fancybox-content');
+  },
+  beforeShow: function(instance, current) {
+    // Add custom class to the slide for styling
+    current.$slide.addClass('fancybox-slide--custom');
+  }
+});
+
+$('[data-fancybox="gallery"]').fancybox({
+  animationEffect: "zoom-in-out",
+  animationDuration: 600,
+  transitionDuration: 1200,
+  buttons: [
+    "zoom",
+    "slideShow",
+    "thumbs",
+    "close",
+  ],
+});
+
+$('[data-fancybox="portfolio"]').fancybox({
+  animationEffect: "zoom-in-out",
+  animationDuration: 600,
+  transitionDuration: 1200,
+  buttons: [
+    "zoom",
+    "slideShow",
+    "thumbs",
+    "close",
+  ],
+});
+
+// Disable hash
+$.fancybox.defaults.hash = false;
+
+// Force side-by-side layout after Fancybox initializes
+$(document).on('afterShow.fb', function(e, instance) {
+  setTimeout(function() {
+    $('.fancybox-slide--image').each(function() {
+      var $slide = $(this);
+      var $content = $slide.find('.fancybox-content');
+      var $caption = $slide.find('.fancybox-caption');
+      
+      if ($content.length && $caption.length) {
+        $slide.css({
+          'display': 'flex',
+          'flex-direction': 'row',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'gap': '30px',
+          'padding': '40px'
+        });
+        
+        $content.css({
+          'flex': '0 1 55%',
+          'max-width': '55%',
+          'margin': '0',
+          'padding': '0'
+        });
+        
+        $caption.css({
+          'position': 'relative',
+          'flex': '0 1 35%',
+          'max-width': '35%',
+          'padding': '30px 25px',
+          'background': 'rgba(25,25,25,0.95)',
+          'border-radius': '16px',
+          'border': '1px solid rgba(255,255,255,0.08)',
+          'margin': '0',
+          'min-height': '180px',
+          'display': 'flex',
+          'align-items': 'center'
+        });
+      }
+    });
+  }, 100);
+});
   $.fancybox.defaults.hash = false;
 
   /*----------------------------------------------------------
