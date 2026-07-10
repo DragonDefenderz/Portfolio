@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+    <!-- locomotive scroll css -->
+    <link rel="stylesheet" href="css/plugins/locomotive-scroll.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- trueman dark mode css <link rel="stylesheet" href="css/style-dark.css">-->
+    <!-- trueman light mode css -->
+    <link rel="stylesheet" href="css/style-light.css" id="trm-switch-style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="p/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Alex Marrero | Game Art and Animation</title>
+
+    <style>
+        /* ===== FORCE SIDE-BY-SIDE FANCYBOX LAYOUT ===== */
+        /* Override Fancybox v3 default absolute caption */
+        .fancybox-slide--image {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 30px !important;
+            padding: 40px !important;
+            background: #0a0a0a !important;
+        }
+
+        .fancybox-slide--image .fancybox-content {
+            flex: 0 1 55% !important;
+            max-width: 55% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+        }
+
+        .fancybox-slide--image .fancybox-image-wrap {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .fancybox-slide--image .fancybox-caption {
+            position: relative !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+            flex: 0 1 35% !important;
+            max-width: 35% !important;
+            padding: 30px 25px !important;
+            background: rgba(25, 25, 25, 0.95) !important;
+            backdrop-filter: blur(8px);
+            border-radius: 16px !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            margin: 0 !important;
+            transform: none !important;
+            text-align: left !important;
+            height: auto !important;
+            min-height: 180px;
+            display: flex !important;
+            align-items: center !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+        }
+
+        .fancybox-slide--image .fancybox-caption .objective-explain {
+            width: 100%;
+        }
+
+        .fancybox-slide--image .fancybox-caption .objective-explain h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
+        }
+
+        .fancybox-slide--image .fancybox-caption .objective-explain p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 16px;
+        }
+
+        .fancybox-slide--image .fancybox-caption .objective-explain .explain-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 14px;
+            border-radius: 20px;
+        }
+
+        /* Hide all gallery UI (arrows, thumbs, infobar) */
+        .fancybox-navigation,
+        .fancybox-thumbs,
+        .fancybox-infobar {
+            display: none !important;
+        }
+
+        /* Mobile: stack vertically */
+        @media (max-width: 820px) {
+            .fancybox-slide--image {
+                flex-direction: column !important;
+                padding: 16px !important;
+                gap: 16px !important;
+            }
+            .fancybox-slide--image .fancybox-content {
+                flex: 0 1 auto !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            .fancybox-slide--image .fancybox-caption {
+                flex: 0 1 auto !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                min-height: 120px;
+                padding: 20px !important;
+            }
+        }
+
+        /* Dark mode compatibility */
+        body.dark-mode .fancybox-slide--image {
+            background: #0a0a0a !important;
+        }
+        body.dark-mode .fancybox-slide--image .fancybox-caption {
+            background: rgba(18, 18, 18, 0.96) !important;
+            border-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* ===== Objective sections ===== */
+        .objective-section {
+            margin-bottom: 60px;
+        }
+        .objective-section:last-of-type {
+            margin-bottom: 40px;
+        }
+        .objective-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .objective-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--trm-text-color, #666);
+            margin-bottom: 30px;
+            max-width: 820px;
+        }
+        .objective-section .trm-portfolio-item {
+            margin-bottom: 30px;
+        }
+        .trm-content {
+            margin-top: 60px !important;
+            /* shift content down as requested */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- app wrapper -->
+    <div class="trm-app-frame">
+
+        <!-- page preloader -->
+        <div class="trm-preloader">
+            <div class="trm-holder">
+                <div class="preloader">
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+        <!-- page preloader end -->
+
+        <!-- change mode preloader -->
+        <div class="trm-mode-swich-animation-frame">
+            <div class="trm-mode-swich-animation">
+                <i class="far fa-sun"></i>
+                <div class="trm-horizon"></div>
+                <i class="far fa-moon"></i>
+            </div>
+        </div>
+        <!-- change mode preloader end -->
+
+        <!-- scroll container -->
+        <div id="trm-dynamic-content" class="trm-swup-animation">
+            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+                <div data-scroll-section id="content" class="trm-scroll-section">
+
+                    <!-- top bar -->
+                    <div class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target="#content"
+                        data-scroll-offset="-10">
+                        <div class="container">
+                            <div class="trm-left-side">
+                                <a href="index.html" class="trm-logo-frame trm-anima-link">
+                                    <div class="trm-logo-text">Marr<span>ero</span></div>
+                                </a>
+                            </div>
+                            <div class="trm-right-side">
+                                <div class="trm-menu">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="index.html#about-triger">About</a></li>
+                                            <li class="current-menu-item menu-item-has-children">
+                                                <a href="index.html#portfolio-triger">Portfolio</a>
+                                                <ul>
+                                                    <li><a href="recent.html">Recent Work</a></li>
+                                                    <li><a href="modeling.html">Modeling</a></li>
+                                                    <li><a href="animation.html">Animation</a></li>
+                                                    <li><a href="sip.html">SIP</a></li>
+                                                    <li><a href="miscellaneous.html">Objectives</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="index.html#resume-triger">Resume</a></li>
+                                            <li><a href="index.html#contact-triger">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="trm-mode-switcher-place"></div>
+                                <a href="files\S. Alex Marrero CV.pdf" download class="trm-btn trm-btn-sm">Download cv
+                                    <i class="fas fa-arrow-down"></i></a>
+                            </div>
+                            <div class="trm-menu-btn"><span></span></div>
+                        </div>
+                    </div>
+                    <!-- top bar end -->
+
+                    <div class="trm-content-start">
+
+                        <!-- banner -->
+                        <div class="trm-banner" data-scroll data-scroll-direction="vertical" data-scroll-speed="-1">
+                            <img src="img/banner.jpg" alt="banner" class="trm-banner-cover" data-scroll
+                                data-scroll-direction="vertical" data-scroll-speed="-4">
+                            <div class="trm-banner-content trm-overlay">
+                                <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="trm-banner-text trm-text-center">
+                                                <div class="trm-label trm-mb-20">Portfolio</div>
+                                                <h1 class="trm-mb-30">Objectives</h1>
+                                                <ul class="trm-breadcrumbs trm-label">
+                                                    <li><a href="index.html" class="trm-anima-link">Home</a></li>
+                                                    <li><span>Portfolio</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- banner end -->
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <!-- content -->
+                                    <div class="trm-content" id="trm-content">
+
+                                        <div data-scroll data-scroll-repeat data-scroll-offset="500"
+                                            id="about-triger"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 1: 3D CHARACTER MODELING                         -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">3D Character Modeling</h2>
+                                            <p class="objective-description">
+                                                Develop high-fidelity, game-ready character models with optimized
+                                                topology, clean UVs, and PBR textures. My goal is to create
+                                                expressive, believable characters that serve both narrative and
+                                                gameplay needs.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-modeling-1"
+                                                        href="img/portfolio/Modeling/head.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Anatomy &amp; Proportion</h4><p>This head study demonstrates my understanding of human anatomy and facial proportion. Clean edge flow ensures smooth deformation for animation while maintaining a low-poly base suitable for real-time rendering.</p><span class="explain-tag">Contributes to Objective 1</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Modeling/head.jpg"
+                                                                alt="Character Head Study">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Anatomy &amp; Proportion</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-modeling-2"
+                                                        href="img/portfolio/Modeling/fullbody.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Full-Body Topology</h4><p>Complete character mesh with attention to deformation zones (shoulders, knees, elbows). Edge loops are strategically placed to support natural movement and facial expressions, reducing animation artifacts.</p><span class="explain-tag">Contributes to Objective 1</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Modeling/fullbody.jpg"
+                                                                alt="Full Body Character">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Full-Body Topology</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-50"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 2: CHARACTER ANIMATION                          -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">Character Animation</h2>
+                                            <p class="objective-description">
+                                                Bring characters to life through weight, timing, and personality.
+                                                I focus on creating fluid, readable animations that convey emotion
+                                                and intent — from subtle idle cycles to high-impact combat sequences.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-animation-1"
+                                                        href="img/portfolio/Animation Practice/weight.png"
+                                                        data-caption='<div class="objective-explain"><h4>Weight &amp; Balance</h4><p>This animation demonstrates the principle of weight through a character lifting a heavy object. Anticipation, squash, and recovery frames communicate mass and effort — essential for believable motion.</p><span class="explain-tag">Contributes to Objective 2</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/weight.png"
+                                                                alt="Weight Animation">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Weight &amp; Balance</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-animation-2"
+                                                        href="img/portfolio/Animation Practice/swing.png"
+                                                        data-caption='<div class="objective-explain"><h4>Combat Timing</h4><p>A sword swing with clear anticipation, strike, and follow-through. The spacing between key poses creates impact, while the recovery frames sell the weight of the weapon and the character&apos;s commitment.</p><span class="explain-tag">Contributes to Objective 2</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/swing.png"
+                                                                alt="Sword Swing">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Combat Timing</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-50"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 3: ENVIRONMENT & WORLD-BUILDING                -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">Environment &amp; World-Building</h2>
+                                            <p class="objective-description">
+                                                Craft immersive, story-driven environments that support gameplay
+                                                and narrative. My approach combines modular asset design, dynamic
+                                                lighting, and atmospheric storytelling to create believable spaces.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-env-1"
+                                                        href="img/portfolio/Modeling/environment1.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Modular Asset Design</h4><p>This environment uses a modular kit to build a medieval village. Reusable assets reduce memory overhead while maintaining visual variety — a critical skill for efficient game development.</p><span class="explain-tag">Contributes to Objective 3</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Modeling/environment1.jpg"
+                                                                alt="Modular Environment">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Modular Asset Design</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-env-2"
+                                                        href="img/portfolio/Modeling/environment2.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Atmospheric Lighting</h4><p>Lighting studies that establish mood and guide the player&apos;s eye. By balancing warm and cool tones, I create depth and emotional resonance within the game space.</p><span class="explain-tag">Contributes to Objective 3</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Modeling/environment2.jpg"
+                                                                alt="Atmospheric Lighting">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Atmospheric Lighting</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-50"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 4: VISUAL EFFECTS & TECH ART                    -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">Visual Effects &amp; Tech Art</h2>
+                                            <p class="objective-description">
+                                                Bridge art and code by creating real-time VFX, shaders, and
+                                                optimized pipelines. My goal is to deliver stunning, performant
+                                                effects that enhance gameplay feedback and visual storytelling.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-vfx-1"
+                                                        href="img/portfolio/Animation Practice/rumble.png"
+                                                        data-caption='<div class="objective-explain"><h4>Real-Time Particle Systems</h4><p>This explosion effect combines sprite sheets, emission curves, and collision responses. Optimized for mobile and desktop, it delivers high-impact feedback without sacrificing frame rate.</p><span class="explain-tag">Contributes to Objective 4</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/rumble.png"
+                                                                alt="Particle Effects">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Real-Time Particle Systems</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-vfx-2"
+                                                        href="img/portfolio/Animation Practice/squash.png"
+                                                        data-caption='<div class="objective-explain"><h4>Shader Development</h4><p>Custom shaders for dissolve, glow, and distortion effects. This work demonstrates my ability to write and iterate on shader code to achieve specific visual goals while maintaining performance.</p><span class="explain-tag">Contributes to Objective 4</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/squash.png"
+                                                                alt="Shader Development">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Shader Development</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-50"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 5: GAME DESIGN & PROTOTYPING                     -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">Game Design &amp; Prototyping</h2>
+                                            <p class="objective-description">
+                                                From paper sketches to playable greybox levels, I design mechanics
+                                                that are intuitive, satisfying, and player‑centric. Rapid prototyping
+                                                and iterative testing allow me to refine gameplay loops before final
+                                                production.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-design-1"
+                                                        href="img/portfolio/Modeling/head.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Paper &amp; Digital Sketching</h4><p>Exploring mechanics through quick sketches and flowcharts. This phase helps identify core interactions and player motivations before investing in full asset production.</p><span class="explain-tag">Contributes to Objective 5</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Modeling/head.jpg"
+                                                                alt="Game Design Sketches">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Paper &amp; Digital Sketching</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-design-2"
+                                                        href="img/portfolio/Modeling/fullbody.jpg"
+                                                        data-caption='<div class="objective-explain"><h4>Greybox &amp; Playtesting</h4><p>Blocking out levels with simple geometry allows me to test pacing, difficulty, and player flow. Early playtesting reveals friction points and opportunities for more engaging encounters.</p><span class="explain-tag">Contributes to Objective 5</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Modeling/fullbody.jpg"
+                                                                alt="Greybox Level">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Greybox &amp; Playtesting</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-50"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 6: PIPELINE & TEAM COLLABORATION                 -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="40">
+                                            <h2 class="objective-heading">Pipeline &amp; Team Collaboration</h2>
+                                            <p class="objective-description">
+                                                Efficient workflows and clear communication are the backbone of
+                                                successful projects. I focus on establishing robust asset pipelines,
+                                                version control best practices, and cross‑discipline collaboration
+                                                to keep teams aligned and productive.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-pipeline-1"
+                                                        href="img/portfolio/Animation Practice/pov.png"
+                                                        data-caption='<div class="objective-explain"><h4>Version Control &amp; Asset Tracking</h4><p>Using Perforce and Git to manage iterations, track changes, and avoid conflicts. Clear naming conventions and folder structures save hours of debugging during crunch.</p><span class="explain-tag">Contributes to Objective 6</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/pov.png"
+                                                                alt="Version Control">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Version Control &amp; Asset Tracking</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <a data-fancybox="obj-pipeline-2"
+                                                        href="img/portfolio/Animation Practice/clock.png"
+                                                        data-caption='<div class="objective-explain"><h4>Cross‑Discipline Communication</h4><p>Bridging art, design, and engineering through clear documentation, daily stand‑ups, and shared milestones. This ensures that creative vision and technical constraints move forward together.</p><span class="explain-tag">Contributes to Objective 6</span></div>'
+                                                        data-options='{"arrows": false, "thumbs": false, "infobar": false}'
+                                                        class="trm-portfolio-item trm-scroll-animation" data-scroll
+                                                        data-scroll-offset="40">
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover"
+                                                                src="img/portfolio/Animation Practice/clock.png"
+                                                                alt="Team Collaboration">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Cross‑Discipline Communication</h6>
+                                                            <div class="trm-zoom-icon"><i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-divider trm-mb-40"></div>
+
+                                        <!-- footer -->
+                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+                                            <div class="trm-label">© 2021 All Rights Reserved.</div>
+                                            <div class="trm-label">Designed by: <a
+                                                    href="https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign"
+                                                    target="_blank">Nazar Miller</a></div>
+                                        </footer>
+
+                                    </div>
+                                    <!-- content end -->
+
+                                    <!-- popup -->
+                                    <div id="trm-order" class="trm-order">
+                                        <div class="trm-popup-content">
+                                            <img src="img/popup.jpg" alt="photo">
+                                            <div class="trm-popup-form-frame">
+                                                <h5 class="trm-mb-40">Write me a message</h5>
+                                                <form>
+                                                    <input type="text" placeholder="Name">
+                                                    <input type="email" placeholder="Email">
+                                                    <textarea rows="6" placeholder="Message"></textarea>
+                                                    <button type="submit" class="trm-btn">Send <i
+                                                            class="fas fa-arrow-right"></i></button>
+                                                </form>
+                                                <div class="trm-text-sm trm-mt-20">* I promise the confidentiality of
+                                                    your personal information</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- popup end -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- mode switcher -->
+        <div class="trm-hidden-switcher">
+            <div class="trm-mode-switcher">
+                <i class="far fa-sun"></i>
+                <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+                <label class="trm-swich" for="trm-swich"></label>
+                <i class="far fa-moon"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/swup.min.js"></script>
+    <script src="js/plugins/locomotive-scroll.js"></script>
+    <script src="js/plugins/typing.js"></script>
+    <script src="js/plugins/fancybox.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
