@@ -44,15 +44,6 @@
             margin-bottom: 30px;
             max-width: 820px;
         }
-        /* make portfolio items clickable and look like animation.html */
-        .objective-section .trm-portfolio-item {
-            margin-bottom: 10px;
-            cursor: pointer;
-            pointer-events: auto;
-        }
-        .objective-section .trm-portfolio-item .trm-zoom-icon {
-            display: flex;
-        }
         .trm-content {
             margin-top: 60px !important;
         }
@@ -60,34 +51,6 @@
             opacity: 1 !important;
             transform: none !important;
             pointer-events: none;
-        }
-        /* caption styling */
-        .trm-image-caption {
-            margin-top: 12px;
-            background: rgba(0,0,0,0.03);
-            padding: 14px 18px;
-            border-radius: 8px;
-            border-left: 3px solid #c9a84c;
-        }
-        .caption-tag {
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #c9a84c;
-            margin-bottom: 4px;
-        }
-        .trm-image-caption p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #555;
-        }
-        .trm-dark-mode .trm-image-caption {
-            background: rgba(255,255,255,0.05);
-            border-left-color: #c9a84c;
-        }
-        .trm-dark-mode .trm-image-caption p {
-            color: #bbb;
         }
         .trm-divider {
             margin: 30px 0 40px;
@@ -108,34 +71,14 @@
         .trm-zoom-icon i {
             font-size: 1.2rem;
         }
-        /* Mini gallery wrapper */
-        .mini-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 8px;
-        }
-        .mini-gallery .trm-portfolio-item {
-            flex: 1 1 calc(33.33% - 10px);
-            min-width: 80px;
-            margin-bottom: 0;
-        }
-        .mini-gallery .trm-portfolio-item .trm-cover-frame {
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        .mini-gallery .trm-portfolio-item .trm-item-description h6 {
-            font-size: 0.7rem;
-            margin-top: 4px;
-            text-align: center;
-        }
-        .mini-gallery .trm-portfolio-item .trm-zoom-icon {
+        /* Hide the hidden gallery divs */
+        .hidden-gallery {
             display: none;
         }
         .sub-section-title {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: var(--trm-heading-color, #222);
         }
         .sub-section-desc {
@@ -255,79 +198,61 @@
                                             id="about-triger"></div>
 
                                         <!-- ========================================================== -->
-                                        <!-- OBJECTIVE 1: Artistic Vision                               -->
+                                        <!-- OBJECTIVE 1: Artistic Vision and Storytelling                -->
                                         <!-- ========================================================== -->
                                         <div class="objective-section" data-scroll data-scroll-offset="80">
-                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Artistic Vision</h2>
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Artistic Vision and Storytelling</h2>
                                             <p class="objective-description" data-scroll data-scroll-offset="50">
                                                 Demonstrate and communicate aesthetic skills and choices based on traditional art theories and current game development practices and next-generation research.
                                             </p>
                                             <div class="row">
-                                                <!-- LEFT SECTION -->
-                                                <div class="col-lg-6 col-md-6">
+                                                <!-- COLUMN 1 - LEFT -->
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Visual Storytelling &amp; Artistic Direction</div>
-                                                    <div class="sub-section-desc">This collection showcases projects that demonstrate the use of composition, color theory, lighting, and character design to communicate narrative, emotion, and atmosphere.</div>
-                                                    <!-- Mini Gallery 1 - Independent -->
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj1-left" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Frieren Art - Character Design Study" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-1.jpg" alt="Frieren Art">
+                                                    <div class="sub-section-desc">Projects demonstrating composition, color theory, lighting, and character design to communicate narrative and emotion.</div>
+                                                    <!-- Main visible item -->
+                                                    <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Frieren - Character Design Study" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj1-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="objectives/objective 1/Objective 1-1-1.jpg" alt="Frieren Art">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Visual Storytelling</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Frieren</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj1-left" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Zenyata Art - Character Concept" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-2.jpg" alt="Zenyata Art">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Zenyata</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj1-left" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Dispatch Art - Environment Concept" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-3.jpg" alt="Dispatch Art">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Dispatch</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Hidden gallery items -->
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Zenyata - Character Concept"></a>
+                                                        <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Dispatch - Environment Concept"></a>
                                                     </div>
-                                                    <!-- End Mini Gallery 1 -->
                                                 </div>
-                                                <!-- RIGHT SECTION -->
-                                                <div class="col-lg-6 col-md-6">
+                                                <!-- COLUMN 2 - RIGHT -->
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Traditional Anatomy Studies</div>
-                                                    <div class="sub-section-desc">Through observational drawing and traditional sculpture, this collection explores the structure of the human body, including muscular systems, skeletal landmarks, and anatomical proportions.</div>
-                                                    <!-- Mini Gallery 2 - Independent (different gallery name) -->
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj1-right" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Anatomy Study - Muscular System" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-1.jpg" alt="Anatomy Study">
+                                                    <div class="sub-section-desc">Observational drawing and sculpture exploring muscular systems, skeletal landmarks, and anatomical proportions.</div>
+                                                    <!-- Main visible item -->
+                                                    <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Anatomy Study - Muscular System" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj1-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="objectives/objective 1/Objective 1-1-2.jpg" alt="Anatomy Study">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Anatomy Studies</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Muscular System</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj1-right" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Anatomy Study - Skeletal Structure" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-2.jpg" alt="Skeletal Study">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Skeletal Structure</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj1-right" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Anatomy Study - Proportion &amp; Balance" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="objectives/objective 1/Objective 1-1-3.jpg" alt="Proportion Study">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Proportion &amp; Balance</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Hidden gallery items -->
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Skeletal Structure Study"></a>
+                                                        <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Proportion &amp; Balance Study"></a>
                                                     </div>
-                                                    <!-- End Mini Gallery 2 -->
                                                 </div>
                                             </div>
                                             <div class="trm-divider trm-mb-50"></div>
@@ -342,66 +267,48 @@
                                                 Conceptualize and generate pre-production art assets through pre-visualization and prototypes usable for multiple game platforms.
                                             </p>
                                             <div class="row">
-                                                <!-- LEFT SECTION -->
-                                                <div class="col-lg-6 col-md-6">
+                                                <!-- COLUMN 1 - LEFT -->
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Cinematic Blocking &amp; Camera Planning</div>
-                                                    <div class="sub-section-desc">These rough composition studies focus on staging, shot framing, and camera progression to visualize how the scene unfolds over time.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj2-left" href="img/portfolio/Animation Practice/timing.png" data-caption="Shot Framing Study" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/timing.png" alt="Shot Framing">
+                                                    <div class="sub-section-desc">Composition studies focusing on staging, shot framing, and camera progression to visualize scene flow.</div>
+                                                    <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/timing.png" data-caption="Shot Framing Study" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj2-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/timing.png" alt="Shot Framing">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Cinematic Blocking</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Shot Framing</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj2-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Camera Progression" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/crane.png" alt="Camera Progression">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Camera Progression</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj2-left" href="img/portfolio/Animation Practice/horse.png" data-caption="Staging &amp; Composition" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/horse.png" alt="Staging">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Staging</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Camera Progression"></a>
+                                                        <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/horse.png" data-caption="Staging &amp; Composition"></a>
                                                     </div>
                                                 </div>
-                                                <!-- RIGHT SECTION -->
-                                                <div class="col-lg-6 col-md-6">
+                                                <!-- COLUMN 2 - RIGHT -->
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Production Planning Workflow</div>
-                                                    <div class="sub-section-desc">This series highlights the relationship between asset creation and engine implementation, establishing a structured pre-production process.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj2-right" href="img/portfolio/Animation Practice/weight.png" data-caption="Asset Pipeline" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/weight.png" alt="Asset Pipeline">
+                                                    <div class="sub-section-desc">Asset creation and engine implementation workflow connecting modeling, texturing, and scene assembly.</div>
+                                                    <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/weight.png" data-caption="Asset Pipeline Workflow" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj2-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/weight.png" alt="Asset Pipeline">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Production Planning</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Asset Pipeline</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj2-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Engine Prototyping" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="Engine Prototyping">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Engine Prototyping</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj2-right" href="img/portfolio/Animation Practice/pov.png" data-caption="UV Layout &amp; Planning" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/pov.png" alt="UV Layout">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>UV Layout</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Engine Prototyping"></a>
+                                                        <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/pov.png" data-caption="UV Layout &amp; Planning"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -417,64 +324,46 @@
                                                 Demonstrate the core skills needed to create 2D and 3D art assets textures and animations utilizing industry-standard software tools.
                                             </p>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Texturing &amp; Shading</div>
                                                     <div class="sub-section-desc">PBR texture creation and material development for realistic game surfaces.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj3-left" href="img/portfolio/Animation Practice/weight.png" data-caption="PBR Texturing" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/weight.png" alt="Texturing">
+                                                    <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/horse.png" data-caption="PBR Texturing Workflow" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj3-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/horse.png" alt="Texturing">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Texturing &amp; Shading</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>PBR Texturing</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj3-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Material Development" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/swing.png" alt="Materials">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Materials</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj3-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/animatic.png" alt="Shaders">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Shaders</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Material Development"></a>
+                                                        <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup"></a>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Rigging &amp; Skinning</div>
                                                     <div class="sub-section-desc">Fundamental rigging and weight painting for deformation and animation.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj3-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Rigging Setup" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="Rigging">
+                                                    <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Rigging Setup" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj3-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="Rigging">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Rigging &amp; Skinning</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Rigging</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj3-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Weight Painting" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/crane.png" alt="Weight Painting">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Weight Painting</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj3-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Deformation Testing" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/horse.png" alt="Deformation">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Deformation</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Weight Painting"></a>
+                                                        <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/rumble.png" data-caption="Deformation Testing"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -490,64 +379,46 @@
                                                 Create industry quality 2D and 3D art assets or animations for use in game projects utilizing industry-standard software tools pipelines and platform guidelines.
                                             </p>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">High-Poly Character Asset</div>
                                                     <div class="sub-section-desc">Detailed high-poly model suitable for baking and game-ready optimization.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj4-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="High-Poly Sculpt" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/rumble.png" alt="High-Poly">
+                                                    <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="High-Poly Sculpt" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj4-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/rumble.png" alt="High-Poly">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>High-Poly Character</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>High-Poly Sculpt</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj4-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Detail Pass" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/weight.png" alt="Detail">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Detail Pass</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj4-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Baking Maps" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/swing.png" alt="Baking">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Baking Maps</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Detail Pass"></a>
+                                                        <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Baking Maps"></a>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Prop &amp; Environment</div>
                                                     <div class="sub-section-desc">Industry-standard prop with optimized topology and PBR textures.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj4-right" href="img/portfolio/Animation Practice/swing.png" data-caption="Prop Modeling" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/swing.png" alt="Prop">
+                                                    <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/swing.png" data-caption="Prop Modeling" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj4-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/swing.png" alt="Prop">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Prop &amp; Environment</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Prop Modeling</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj4-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Environment Asset" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/crane.png" alt="Environment">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Environment</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj4-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Optimized Topology" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/horse.png" alt="Topology">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Topology</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Environment Asset"></a>
+                                                        <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Optimized Topology"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -563,64 +434,46 @@
                                                 Adapt export integrate and optimize game art and animation assets including shaders and lighting into 2D and 3D game projects working within a production pipeline and the confines of a project's game engine tools and other constraints.
                                             </p>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Engine Integration</div>
                                                     <div class="sub-section-desc">Asset import, shader setup, and real-time lighting in engine.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj5-left" href="img/portfolio/Animation Practice/squash.png" data-caption="Engine Import" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/squash.png" alt="Import">
+                                                    <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/squash.png" data-caption="Engine Import" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj5-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/squash.png" alt="Engine Integration">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Engine Integration</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Engine Import</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj5-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/animatic.png" alt="Shaders">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Shader Setup</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj5-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="Lighting &amp; Post-Processing" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/rumble.png" alt="Lighting">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Lighting</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup"></a>
+                                                        <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="Lighting &amp; Post-Processing"></a>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Optimization &amp; LOD</div>
                                                     <div class="sub-section-desc">Efficient LODs and draw calls for performance on multiple platforms.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj5-right" href="img/portfolio/Animation Practice/clock.png" data-caption="LOD Setup" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="LOD">
+                                                    <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="LOD Setup" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj5-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="LOD">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Optimization &amp; LOD</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>LOD Setup</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj5-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Draw Call Optimization" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/timing.png" alt="Draw Calls">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Draw Calls</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj5-right" href="img/portfolio/Animation Practice/pov.png" data-caption="Performance Testing" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/pov.png" alt="Performance">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Performance</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Draw Call Optimization"></a>
+                                                        <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/pov.png" data-caption="Performance Testing"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -636,64 +489,46 @@
                                                 Establish collaboration mentorship and professional leadership skills by working with other disciplines to deliver highly polished and completed projects.
                                             </p>
                                             <div class="row">
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Team Collaboration</div>
-                                                    <div class="sub-section-desc">Worked with designers and engineers to deliver a complete character pipeline.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj6-left" href="img/portfolio/Animation Practice/pov.png" data-caption="Cross-Discipline Work" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/pov.png" alt="Collaboration">
+                                                    <div class="sub-section-desc">Working with designers and engineers to deliver a complete character pipeline.</div>
+                                                    <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/pov.png" data-caption="Cross-Discipline Work" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj6-gallery-left"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/pov.png" alt="Collaboration">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Team Collaboration</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Cross-Discipline</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj6-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Pipeline Coordination" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/crane.png" alt="Pipeline">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Pipeline Coordination</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj6-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Final Delivery" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/weight.png" alt="Delivery">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Final Delivery</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Pipeline Coordination"></a>
+                                                        <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Final Delivery"></a>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
+                                                <div class="col-lg-6">
                                                     <div class="sub-section-title">Mentorship &amp; Leadership</div>
-                                                    <div class="sub-section-desc">Led a small team and provided feedback to junior artists on asset quality.</div>
-                                                    <div class="mini-gallery">
-                                                        <a data-fancybox="gallery-obj6-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Team Leadership" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/timing.png" alt="Leadership">
+                                                    <div class="sub-section-desc">Leading a small team and providing feedback to junior artists on asset quality.</div>
+                                                    <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Team Leadership" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                       data-fancybox="obj6-gallery-right"
+                                                       data-options='{"thumbs": false, "loop": false}'>
+                                                        <div class="trm-cover-frame">
+                                                            <img class="trm-cover" src="img/portfolio/Animation Practice/timing.png" alt="Leadership">
+                                                        </div>
+                                                        <div class="trm-item-description">
+                                                            <h6>Mentorship &amp; Leadership</h6>
+                                                            <div class="trm-zoom-icon">
+                                                                <i class="fas fa-search-plus"></i>
                                                             </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Team Leadership</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj6-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Feedback &amp; Review" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/horse.png" alt="Feedback">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Feedback &amp; Review</h6>
-                                                            </div>
-                                                        </a>
-                                                        <a data-fancybox="gallery-obj6-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Project Management" class="trm-portfolio-item">
-                                                            <div class="trm-cover-frame">
-                                                                <img class="trm-cover" src="img/portfolio/Animation Practice/clock.png" alt="Management">
-                                                            </div>
-                                                            <div class="trm-item-description">
-                                                                <h6>Project Management</h6>
-                                                            </div>
-                                                        </a>
+                                                        </div>
+                                                    </a>
+                                                    <div class="hidden-gallery">
+                                                        <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Feedback &amp; Review"></a>
+                                                        <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Project Management"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -711,7 +546,7 @@
                                     </div>
                                     <!-- content end -->
 
-                                    <!-- popup (keep as is) -->
+                                    <!-- popup -->
                                     <div id="trm-order" class="trm-order">
                                         <div class="trm-popup-content">
                                             <img src="img/popup.jpg" alt="photo">
