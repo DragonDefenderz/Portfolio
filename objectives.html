@@ -86,6 +86,34 @@
             color: var(--trm-text-color, #666);
             margin-bottom: 12px;
         }
+        /* Caption styling - matching your reference */
+        .trm-image-caption {
+            margin-top: 12px;
+            background: rgba(0,0,0,0.03);
+            padding: 14px 18px;
+            border-radius: 8px;
+            border-left: 3px solid #c9a84c;
+        }
+        .caption-tag {
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #c9a84c;
+            margin-bottom: 4px;
+        }
+        .trm-image-caption p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .trm-dark-mode .trm-image-caption {
+            background: rgba(255,255,255,0.05);
+            border-left-color: #c9a84c;
+        }
+        .trm-dark-mode .trm-image-caption p {
+            color: #bbb;
+        }
     </style>
 </head>
 
@@ -198,10 +226,10 @@
                                             id="about-triger"></div>
 
                                         <!-- ========================================================== -->
-                                        <!-- OBJECTIVE 1: Artistic Vision and Storytelling                -->
+                                        <!-- OBJECTIVE 1: Artistic Vision                               -->
                                         <!-- ========================================================== -->
                                         <div class="objective-section" data-scroll data-scroll-offset="80">
-                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Artistic Vision and Storytelling</h2>
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Artistic Vision</h2>
                                             <p class="objective-description" data-scroll data-scroll-offset="50">
                                                 Demonstrate and communicate aesthetic skills and choices based on traditional art theories and current game development practices and next-generation research.
                                             </p>
@@ -209,7 +237,7 @@
                                                 <!-- COLUMN 1 - LEFT -->
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Visual Storytelling &amp; Artistic Direction</div>
-                                                    <div class="sub-section-desc">Projects demonstrating composition, color theory, lighting, and character design to communicate narrative and emotion.</div>
+                                                    <div class="sub-section-desc">Projects demonstrating composition, color theory, lighting, and character design.</div>
                                                     <!-- Main visible item -->
                                                     <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Frieren - Character Design Study" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj1-gallery-left"
@@ -229,13 +257,18 @@
                                                         <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Zenyata - Character Concept"></a>
                                                         <a data-fancybox="obj1-gallery-left" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Dispatch - Environment Concept"></a>
                                                     </div>
+                                                    <!-- How it contributes -->
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>This collection showcases projects that demonstrate the use of composition, color theory, lighting, and character design to communicate narrative, emotion, and atmosphere. Each piece emphasizes intentional artistic decisions that support storytelling while reflecting modern game art principles and stylized visual development.</p>
+                                                    </div>
                                                 </div>
                                                 <!-- COLUMN 2 - RIGHT -->
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Traditional Anatomy Studies</div>
-                                                    <div class="sub-section-desc">Observational drawing and sculpture exploring muscular systems, skeletal landmarks, and anatomical proportions.</div>
+                                                    <div class="sub-section-desc">Observational drawing and sculpture exploring the human form.</div>
                                                     <!-- Main visible item -->
-                                                    <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Anatomy Study - Muscular System" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
+                                                    <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Anatomy Study - Muscular System" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj1-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
                                                         <div class="trm-cover-frame">
@@ -250,8 +283,13 @@
                                                     </a>
                                                     <!-- Hidden gallery items -->
                                                     <div class="hidden-gallery">
-                                                        <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-2.jpg" data-caption="Skeletal Structure Study"></a>
+                                                        <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-1.jpg" data-caption="Skeletal Structure Study"></a>
                                                         <a data-fancybox="obj1-gallery-right" href="objectives/objective 1/Objective 1-1-3.jpg" data-caption="Proportion &amp; Balance Study"></a>
+                                                    </div>
+                                                    <!-- How it contributes -->
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Through observational drawing and traditional sculpture, this collection explores the structure of the human body, including muscular systems, skeletal landmarks, and anatomical proportions. These studies developed a deeper understanding of form, balance, and movement.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -270,7 +308,7 @@
                                                 <!-- COLUMN 1 - LEFT -->
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Cinematic Blocking &amp; Camera Planning</div>
-                                                    <div class="sub-section-desc">Composition studies focusing on staging, shot framing, and camera progression to visualize scene flow.</div>
+                                                    <div class="sub-section-desc">Composition studies for staging, shot framing, and camera progression.</div>
                                                     <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/timing.png" data-caption="Shot Framing Study" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj2-gallery-left"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -288,11 +326,15 @@
                                                         <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Camera Progression"></a>
                                                         <a data-fancybox="obj2-gallery-left" href="img/portfolio/Animation Practice/horse.png" data-caption="Staging &amp; Composition"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>These rough composition studies focus on staging, shot framing, and camera progression to visualize how the scene unfolds over time. Testing different viewpoints and character interactions during pre-production ensured that the narrative remained visually clear and engaging before animation.</p>
+                                                    </div>
                                                 </div>
                                                 <!-- COLUMN 2 - RIGHT -->
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Production Planning Workflow</div>
-                                                    <div class="sub-section-desc">Asset creation and engine implementation workflow connecting modeling, texturing, and scene assembly.</div>
+                                                    <div class="sub-section-desc">Asset creation and engine implementation workflow.</div>
                                                     <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/weight.png" data-caption="Asset Pipeline Workflow" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj2-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -310,6 +352,10 @@
                                                         <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Engine Prototyping"></a>
                                                         <a data-fancybox="obj2-gallery-right" href="img/portfolio/Animation Practice/pov.png" data-caption="UV Layout &amp; Planning"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>This series highlights the relationship between asset creation and engine implementation. By reviewing UV layouts alongside in-engine prototypes, I established a structured workflow that connected modeling, texturing, and scene assembly into a cohesive pre-production process.</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="trm-divider trm-mb-50"></div>
@@ -326,7 +372,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Texturing &amp; Shading</div>
-                                                    <div class="sub-section-desc">PBR texture creation and material development for realistic game surfaces.</div>
+                                                    <div class="sub-section-desc">PBR texture creation and material development.</div>
                                                     <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/horse.png" data-caption="PBR Texturing Workflow" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj3-gallery-left"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -344,10 +390,14 @@
                                                         <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Material Development"></a>
                                                         <a data-fancybox="obj3-gallery-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Shows ability to create PBR textures and materials for realistic surfaces.</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Rigging &amp; Skinning</div>
-                                                    <div class="sub-section-desc">Fundamental rigging and weight painting for deformation and animation.</div>
+                                                    <div class="sub-section-desc">Fundamental rigging and weight painting for deformation.</div>
                                                     <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Rigging Setup" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj3-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -365,6 +415,10 @@
                                                         <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Weight Painting"></a>
                                                         <a data-fancybox="obj3-gallery-right" href="img/portfolio/Animation Practice/rumble.png" data-caption="Deformation Testing"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Fundamental rigging and weight painting for deformation and animation.</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="trm-divider trm-mb-50"></div>
@@ -381,7 +435,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">High-Poly Character Asset</div>
-                                                    <div class="sub-section-desc">Detailed high-poly model suitable for baking and game-ready optimization.</div>
+                                                    <div class="sub-section-desc">Detailed high-poly model for baking and optimization.</div>
                                                     <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="High-Poly Sculpt" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj4-gallery-left"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -399,10 +453,14 @@
                                                         <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Detail Pass"></a>
                                                         <a data-fancybox="obj4-gallery-left" href="img/portfolio/Animation Practice/swing.png" data-caption="Baking Maps"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Detailed high-poly model suitable for baking and game-ready optimization.</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Prop &amp; Environment</div>
-                                                    <div class="sub-section-desc">Industry-standard prop with optimized topology and PBR textures.</div>
+                                                    <div class="sub-section-desc">Optimized props with PBR textures and clean topology.</div>
                                                     <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/swing.png" data-caption="Prop Modeling" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj4-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -420,6 +478,10 @@
                                                         <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/crane.png" data-caption="Environment Asset"></a>
                                                         <a data-fancybox="obj4-gallery-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Optimized Topology"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Industry-standard prop with optimized topology and PBR textures.</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="trm-divider trm-mb-50"></div>
@@ -436,7 +498,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Engine Integration</div>
-                                                    <div class="sub-section-desc">Asset import, shader setup, and real-time lighting in engine.</div>
+                                                    <div class="sub-section-desc">Asset import, shader setup, and real-time lighting.</div>
                                                     <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/squash.png" data-caption="Engine Import" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj5-gallery-left"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -454,10 +516,14 @@
                                                         <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/animatic.png" data-caption="Shader Setup"></a>
                                                         <a data-fancybox="obj5-gallery-left" href="img/portfolio/Animation Practice/rumble.png" data-caption="Lighting &amp; Post-Processing"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Shows asset import, shader setup, and real-time lighting in engine.</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Optimization &amp; LOD</div>
-                                                    <div class="sub-section-desc">Efficient LODs and draw calls for performance on multiple platforms.</div>
+                                                    <div class="sub-section-desc">Efficient LODs and draw calls for performance.</div>
                                                     <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="LOD Setup" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj5-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -475,6 +541,10 @@
                                                         <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Draw Call Optimization"></a>
                                                         <a data-fancybox="obj5-gallery-right" href="img/portfolio/Animation Practice/pov.png" data-caption="Performance Testing"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Efficient LODs and draw calls for performance on multiple platforms.</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="trm-divider trm-mb-50"></div>
@@ -491,7 +561,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Team Collaboration</div>
-                                                    <div class="sub-section-desc">Working with designers and engineers to deliver a complete character pipeline.</div>
+                                                    <div class="sub-section-desc">Working with designers and engineers on character pipeline.</div>
                                                     <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/pov.png" data-caption="Cross-Discipline Work" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj6-gallery-left"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -509,10 +579,14 @@
                                                         <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/crane.png" data-caption="Pipeline Coordination"></a>
                                                         <a data-fancybox="obj6-gallery-left" href="img/portfolio/Animation Practice/weight.png" data-caption="Final Delivery"></a>
                                                     </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Worked with designers and engineers to deliver a complete character pipeline.</p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="sub-section-title">Mentorship &amp; Leadership</div>
-                                                    <div class="sub-section-desc">Leading a small team and providing feedback to junior artists on asset quality.</div>
+                                                    <div class="sub-section-desc">Leading and providing feedback to junior artists.</div>
                                                     <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/timing.png" data-caption="Team Leadership" class="trm-portfolio-item trm-scroll-animation" data-scroll data-scroll-offset="40"
                                                        data-fancybox="obj6-gallery-right"
                                                        data-options='{"thumbs": false, "loop": false}'>
@@ -529,6 +603,10 @@
                                                     <div class="hidden-gallery">
                                                         <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/horse.png" data-caption="Feedback &amp; Review"></a>
                                                         <a data-fancybox="obj6-gallery-right" href="img/portfolio/Animation Practice/clock.png" data-caption="Project Management"></a>
+                                                    </div>
+                                                    <div class="trm-image-caption">
+                                                        <div class="caption-tag">✦ How it contributes</div>
+                                                        <p>Led a small team and provided feedback to junior artists on asset quality.</p>
                                                     </div>
                                                 </div>
                                             </div>
