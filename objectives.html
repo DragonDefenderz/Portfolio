@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+    <!-- locomotive scroll css -->
+    <link rel="stylesheet" href="css/plugins/locomotive-scroll.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- trueman dark mode css <link rel="stylesheet" href="css/style-dark.css">-->
+    <!-- trueman light mode css -->
+    <link rel="stylesheet" href="css/style-light.css?v=2" id="trm-switch-style">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="p/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Alex Marrero | Game Art and Animation</title>
+
+    <style>
+        /* Objective section styles */
+        .objective-section {
+            margin-bottom: 60px;
+        }
+        .objective-section:last-of-type {
+            margin-bottom: 40px;
+        }
+        .objective-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .objective-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--trm-text-color, #666);
+            margin-bottom: 30px;
+            max-width: 820px;
+        }
+        .objective-section .trm-portfolio-item {
+            margin-bottom: 30px;
+            cursor: default;
+            pointer-events: none;
+        }
+        .objective-section .trm-portfolio-item .trm-zoom-icon {
+            display: none;
+        }
+        .trm-content {
+            margin-top: 60px !important;
+        }
+        .trm-portfolio-item .trm-item-description {
+            opacity: 1 !important;
+            transform: none !important;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- app wrapper -->
+    <div class="trm-app-frame">
+
+        <!-- page preloader -->
+        <div class="trm-preloader">
+            <div class="trm-holder">
+                <div class="preloader">
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+        <!-- page preloader end -->
+
+        <!-- change mode preloader -->
+        <div class="trm-mode-swich-animation-frame">
+            <div class="trm-mode-swich-animation">
+                <i class="far fa-sun"></i>
+                <div class="trm-horizon"></div>
+                <i class="far fa-moon"></i>
+            </div>
+        </div>
+        <!-- change mode preloader end -->
+
+        <!-- scroll container -->
+        <div id="trm-dynamic-content" class="trm-swup-animation">
+            <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+                <div data-scroll-section id="content" class="trm-scroll-section">
+
+                    <!-- top bar -->
+                    <div class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target="#content"
+                        data-scroll-offset="-10">
+                        <div class="container">
+                            <div class="trm-left-side">
+                                <a href="index.html" class="trm-logo-frame trm-anima-link">
+                                    <div class="trm-logo-text">Marr<span>ero</span></div>
+                                </a>
+                            </div>
+                            <div class="trm-right-side">
+                                <div class="trm-menu">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="index.html#about-triger">About</a></li>
+                                            </li>
+                                              <li id="objectives-link" class="current-menu-item">
+                                                <a href="objectives.html">Objectives</a>
+                                              </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="index.html#portfolio-triger">Portfolio</a>
+                                                <ul>
+                                                    <li><a href="recent.html">Recent Work</a></li>
+                                                    <li><a href="modeling.html">Modeling</a></li>
+                                                    <li><a href="animation.html">Animation</a></li>
+                                                    <li><a href="sip.html">SIP</a></li>
+                                                    <li><a href="miscellaneous.html">Personal Projects</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="index.html#resume-triger">Resume</a></li>
+                                            <li><a href="index.html#contact-triger">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="trm-mode-switcher-place"></div>
+                                <a href="files\S. Alex Marrero CV.pdf" download class="trm-btn trm-btn-sm">Download cv
+                                    <i class="fas fa-arrow-down"></i></a>
+                            </div>
+                            <div class="trm-menu-btn"><span></span></div>
+                        </div>
+                    </div>
+                    <!-- top bar end -->
+
+                    <div class="trm-content-start">
+
+                        <!-- banner -->
+                        <div class="trm-banner" data-scroll data-scroll-direction="vertical" data-scroll-speed="-1">
+                            <img src="img/banner.jpg" alt="banner" class="trm-banner-cover" data-scroll
+                                data-scroll-direction="vertical" data-scroll-speed="-4">
+                            <div class="trm-banner-content trm-overlay">
+                                <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="trm-banner-text trm-text-center">
+                                                <div class="trm-label trm-mb-20">Portfolio</div>
+                                                <h1 class="trm-mb-30">Objectives</h1>
+                                                <ul class="trm-breadcrumbs trm-label">
+                                                    <li><a href="index.html" class="trm-anima-link">Home</a></li>
+                                                    <li><span>Objectives</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- banner end -->
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <!-- content -->
+                                    <div class="trm-content" id="trm-content">
+
+                                        <div data-scroll data-scroll-repeat data-scroll-offset="500"
+                                            id="about-triger"></div>
+
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 1: Artistic Vision and Storytelling      -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Artistic Vision and Storytelling</h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Demonstrate and communicate aesthetic skills and choices based on traditional art theories and current game development practices and next-generation research.
+                                            </p>
+                                            <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-50"></div>
+<div style="height: 40px;"></div>
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 2: Pre-Production Asset Planning   -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Pre-Production Asset Planning</h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Conceptualize and generate pre-production art assets through pre-visualization and prototypes usable for multiple game platforms.
+                                            </p>
+                                            <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6" data-scroll data-scroll-offset="50">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6" data-scroll data-scroll-offset="50">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-50"></div>
+<div style="height: 40px;"></div>
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 3: Foundation Proficiency       -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Foundation Proficiency </h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Demonstrate the core skills needed to create 2D and 3D art assets textures and animations utilizing industry-standard software tools.
+                                            </p>
+                                           <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-50"></div>
+<div style="height: 40px;"></div>
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 4: Industry-Quality Asset Production     -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Industry-Quality Asset Production</h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Create industry quality 2D and 3D art assets or animations for use in game projects utilizing industry-standard software tools pipelines and platform guidelines. Assets may include characters props textures environment elements collision objects keyframed animations motion capture character animations environmental animations and FX.
+                                            </p>
+                                           <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-50"></div>
+<div style="height: 40px;"></div>
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 5: Pipeline Integration and Optimization                     -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Pipeline Integration and Optimization</h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Adapt export integrate and optimize game art and animation assets including shaders and lighting into 2D and 3D game projects working within a production pipeline and the confines of a project's game engine tools and other constraints.
+                                            </p>
+                                            <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here].</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-50"></div>
+<div style="height: 40px;"></div>
+                                        <!-- ========================================================== -->
+                                        <!-- OBJECTIVE 6: Collaborative Projects      -->
+                                        <!-- ========================================================== -->
+                                        <div class="objective-section" data-scroll data-scroll-offset="80">
+                                            <h2 class="objective-heading" data-scroll data-scroll-offset="50">Collaboration, Mentorship & Leadership</h2>
+                                            <p class="objective-description" data-scroll data-scroll-offset="50">
+                                                Establish collaboration mentorship and professional leadership skills by working with other disciplines to deliver highly polished and completed projects.
+                                            </p>
+                                            <div class="row">
+    <!-- First column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Character Head Study">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Anatomy &amp; Proportion</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second column: Image + Caption -->
+    <div class="col-lg-6 col-md-6">
+        <div class="trm-portfolio-wrapper">
+            <div class="trm-portfolio-item">
+                <div class="trm-cover-frame">
+                    <img class="trm-cover" img src="img/banner.jpg"
+                        alt="Full Body Character">
+                </div>
+                <div class="trm-item-description">
+                    <h6>Full-Body Topology</h6>
+                </div>
+            </div>
+            <!-- Caption text box underneath (INSIDE the column) -->
+            <div class="trm-image-caption">
+                <div class="caption-tag">✦ How it contributes</div>
+                <p>[Insert Explanation Here]</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 40px;"></div>
+                                        <div class="trm-divider trm-mb-40"></div>
+<div style="height: 40px;"></div>
+                                        <!-- footer -->
+                                        <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+                                            <div class="trm-label">© 2021 All Rights Reserved.</div>
+                                            <div class="trm-label">Designed by: <a
+                                                    href="https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign"
+                                                    target="_blank">Nazar Miller</a></div>
+                                        </footer>
+
+                                    </div>
+                                    <!-- content end -->
+
+                                    <!-- popup -->
+                                    <div id="trm-order" class="trm-order">
+                                        <div class="trm-popup-content">
+                                            <img src="img/popup.jpg" alt="photo">
+                                            <div class="trm-popup-form-frame">
+                                                <h5 class="trm-mb-40">Write me a message</h5>
+                                                <form>
+                                                    <input type="text" placeholder="Name">
+                                                    <input type="email" placeholder="Email">
+                                                    <textarea rows="6" placeholder="Message"></textarea>
+                                                    <button type="submit" class="trm-btn">Send <i
+                                                            class="fas fa-arrow-right"></i></button>
+                                                </form>
+                                                <div class="trm-text-sm trm-mt-20">* I promise the confidentiality of
+                                                    your personal information</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- popup end -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- mode switcher -->
+        <div class="trm-hidden-switcher">
+            <div class="trm-mode-switcher">
+                <i class="far fa-sun"></i>
+                <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+                <label class="trm-swich" for="trm-swich"></label>
+                <i class="far fa-moon"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/swup.min.js"></script>
+    <script src="js/plugins/locomotive-scroll.js"></script>
+    <script src="js/plugins/typing.js"></script>
+    <script src="js/plugins/fancybox.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
